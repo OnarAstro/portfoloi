@@ -1,0 +1,143 @@
+/* 
+
+=====================
+  table of contents
+=====================
+
+1. Left Section
+2. Right Section ==> animation
+
+*/
+
+section.hero {
+  margin-top: 3rem;
+}
+
+/* 
+=====================
+  1. Left Section
+=====================
+*/
+
+
+section.hero .parent-avatar.flex {
+  align-items: end;
+  gap: 0.6rem;
+  min-height: 88px;
+}
+
+section.hero .left-section {
+  flex-grow: 1;
+}
+
+section.hero .icon-verified {
+  color: var(--blue);
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+section.hero .avatar {
+  width: 88px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid darkorange;
+  padding: 1px;
+  box-shadow: 2px 2px 40px rgba(255, 255, 255, 0.253) inset;
+  margin-right: 0.6rem;
+}
+
+section.hero .parent-title {
+  margin: 24px 0;
+}
+section.hero h1.title {
+  font-size: 2.85rem;
+  line-height: 3.3rem;
+  margin-top: 15px;
+  /* color: var(--title); */
+  color: var(--title);
+  text-transform: uppercase;
+
+  /* width: max-content; */
+}
+
+section.hero h1.astro {
+  background: -webkit-linear-gradient(darkorange, var(--subtitle));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  border-right: 4px solid darkorange;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 2.5s steps(30), cursor 0.4s step-end infinite alternate;
+  /* animation: typing 1.5s steps(30); */
+  width: fit-content;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50%;
+  }
+}
+
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+
+section.hero .sub-title {
+  color: var(--subtitle);
+  font-size: 0.9rem;
+  line-height: 1.65rem;
+  margin-bottom: 32px;
+  width: 100%;
+  max-width: 700px;
+  min-width: 250px;
+}
+
+section.hero .all-icons {
+  font-size: 1.3rem;
+  gap: 1.5rem;
+  color: var(--subtitle);
+}
+
+section.hero .all-icons .icon:hover {
+  font-size: 1.4rem;
+  transition: 0.3s;
+  cursor: pointer;
+  color: var(--icon-hover);
+}
+
+/* 
+=================================
+  1. Right Section ==> animation
+=================================
+*/
+
+section.hero .animation {
+  width: 100%;
+  translate: 100px 55px;
+}
+
+@media (max-width: 1250px) {
+  section.hero .animation {
+    display: none;
+  }
+  section.hero h1.astro {
+    /* border: none; */
+  }
+}
+
+@media (max-width: 700px) {
+  section.hero h1.astro {
+    /* white-space: wrap; */
+    /* animation: none; */
+  }
+  section.hero h1.astro span {
+    /* display: none; */
+  }
+}
